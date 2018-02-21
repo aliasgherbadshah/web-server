@@ -1,19 +1,10 @@
-var portNumber = 2222
+var portNumber = process.env.PORT || 2222
 var express = require("express");
+var middelwaer = require('./middelwaer.js');
 var app = express();
 
-var middelwaer = {
 
-	serverAuthentication : function(req,res, next){
-		console.log("PRIVATE ROUTE HIT !!!!!");
-		next()
-	},
 
-	loger : function(req, res, next){
-		console.log("Request " + req.method + " " + req.originalUrl +" Date " + new Date().toString());
-		next();
-	}
-}
 
 app.use(middelwaer.loger)
 
