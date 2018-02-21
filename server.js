@@ -5,7 +5,7 @@ var app = express();
 var middelwaer = {
 
 	serverAuthentication : function(req,res, next){
-		console.log("PRIVATE ROUTE HIT");
+		console.log("PRIVATE ROUTE HIT !!!!!");
 		next()
 	},
 
